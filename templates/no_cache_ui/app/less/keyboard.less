@@ -1,0 +1,169 @@
+@import url(./default.less);
+
+.keyboard {
+  & + .keyboard {
+    margin-top: 50px;
+
+    input {
+      margin-top: 0;
+    }
+  }
+
+  input {
+    border: 7px solid @black;
+    color: #000;
+    font-size: 72px;
+    line-height: 96px;
+    max-width: 789px;
+    height: unset;
+    padding: 9px 10px;
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::placeholder {
+      color: #B0B0B0;
+      font-size: 72px;
+      line-height: 96px;
+      text-align: center;
+    }
+  }
+}
+
+.ui-keyboard {
+  background: #f0f0f0;
+  border: 1px solid transparent;
+  top: 0 !important;
+  left: 0 !important;
+  margin-top: 23px;
+
+  .ui-keyboard-keyset {
+    text-align: center;
+  }
+
+  .ui-keyboard-button {
+    height: 75px;
+    min-width: 75px;
+    border-radius: 0;
+    font-size: 20px;
+    margin: 6px 7px 4px;
+    background: @gray_2;
+    font-family: @secondary_font;
+    border-radius: 9px;
+
+    & > span {
+      background: transparent;
+      color: @black;
+      font-size: 20px;
+      font-family: @secondary_font;
+    }
+
+    &.ui-keyboard-accept,
+    &.ui-keyboard-cancel {
+      margin-top: 62px;
+      min-height: 127px;
+      font-size: 31px;
+
+      & > span {
+        font-size: 31px;
+      }
+    }
+
+    &.ui-keyboard-accept {
+      width: 347px;
+      padding: 0 15px;
+      text-transform: uppercase;
+      background: @black;
+      cursor: pointer;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 3.75px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      border: 1px solid @gray;
+      min-height: 75px;
+      color: #fff;
+      margin: 40px auto 0;
+      border-radius: 38px;
+    }
+
+    &.ui-keyboard-cancel {
+      width: 19%;
+    }
+  }
+}
+
+// active keyboard
+.main-contact.keyboard-active {
+
+  .to-hide {
+    display: none;
+  }
+
+  .keyboard-close {
+    display: block;
+  }
+  
+  .keyboard {
+    margin-bottom: 246px;
+  }
+    
+  .grid-position--top {
+    background-color: #fff;
+    margin-top: -9.5%;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0px 2px 24px rgba(0,0,0,0.5);
+
+    .user-form {
+      margin-top: 42px;
+      max-width: 809px;
+
+      input:not([type=submit]).email-input,
+      input:not([type=submit]) {
+        margin-top: 19px;
+      }
+
+      .two-column {
+
+        &>* {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// end active keyboard
+
+@media screen and (max-width: 560px) {
+  
+  .keyboard {
+    & + .keyboard {
+      margin-top: 15px;
+    }
+
+    input {
+      border: 4px solid @black;
+      height: 7vh;
+      font-size: 13px;
+      line-height: 120%;
+
+      &::placeholder {
+        color: #B0B0B0;
+        font-size: 13px;
+        line-height: 120%;
+        text-align: center;
+      }
+    }
+  }
+
+  .ui-keyboard-button {
+    height: 5vh;
+    min-width: 4vh;
+    margin: 0;
+
+    &.ui-keyboard-space {
+      height: 5vh;
+      width: 8vh;
+    }
+  }
+}

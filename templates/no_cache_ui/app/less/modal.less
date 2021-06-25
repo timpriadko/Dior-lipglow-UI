@@ -1,0 +1,177 @@
+@import url(./mixin.less);
+
+// modal
+.modal-wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 560px) {
+        position: fixed;
+    }
+
+    .ui-close-modal {
+        display: block;
+        margin: 0px 0px 0 auto;
+    }
+}
+
+.modal-wrap.show {
+    display: block;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    max-height: 90%;
+    height: 1617px;
+    width: 933px;
+    max-width: 90%;
+    margin: 169px auto 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 2;
+
+    @media screen and (max-width: 560px) {
+        max-width: 93vw;
+        max-height: 81vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    &__header {
+        font-size: 32px;
+        padding-bottom: 20px;
+        margin: 61px 0 0 50px;
+        font-size: 26px;
+        line-height: 39px;
+        font-weight: bold;
+
+        @media screen and (max-width: 560px) {
+            margin: 20px 0 0 20px;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        overflow: auto;
+        margin: 64px 24px 0 50px;
+
+        @media screen and (max-width: 560px) {
+            margin: 20px 15px 0 20px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 32px;
+        margin-top: 0;
+        margin-bottom: 31px;
+
+        @media screen and (max-width: 560px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__footer {
+        padding-top: 20px;
+        text-align: center;
+
+        .ui-close-modal {
+            display: block;
+            margin: 0 auto 0;
+            margin-bottom: 13%;
+
+            @media screen and (max-width: 560px) {
+                margin-bottom: 30px;
+                height: unset;
+            }
+
+            &::before,
+            &::after {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__number {
+        flex: 0 0 100px;
+    
+        &_header {
+            font-weight: bold;
+        }
+    }
+
+    &__text-col {
+
+        &_header {
+            font-weight: bold;
+        }
+    }
+}
+
+.modal_btn {
+    display: inline-block;
+    padding: 20px 40px;
+    min-width: 300px;
+    color: #fff;
+    background-color: #292929;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 560px) {
+    .modal__row {
+      flex-direction: column;
+    }
+  
+    .modal__number {
+      flex: initial;
+      margin-bottom: 15px;
+    }
+  
+    .modal_btn {
+      min-width: initial;
+      width: 100%;
+    }
+}
+
+.terms {
+  border-bottom: 2px solid #000;
+  line-height: 100%;
+  transition: all .2s linear;
+  cursor: pointer;
+  .transition;
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+    .transition;
+  }
+}

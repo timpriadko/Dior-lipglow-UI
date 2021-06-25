@@ -1,0 +1,190 @@
+@import url(./mixin.less);
+
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('../fonts/CenturyGothic/CenturyGothic.eot');
+	src: local('Century Gothic'), local('CenturyGothic'),
+		url('../fonts/CenturyGothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic/CenturyGothic.woff') format('woff'),
+		url('../fonts/CenturyGothic/CenturyGothic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('../fonts/CenturyGothic/CenturyGothic-Bold.eot');
+	src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+		url('../fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff'),
+		url('../fonts/CenturyGothic/CenturyGothic-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSans light';
+  src: url('../fonts/GillSans/gillsans-light.woff2') format('woff2'),
+       url('../fonts/GillSans/gillsans-light.woff') format('woff'),
+       url('../fonts/GillSans/gillsans-light.ttf.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+// fonts
+@base_font: 'Century Gothic', sans-serif;
+@secondary_font: 'GillSans light', sans-serif;
+
+// colors
+@black: #000;
+@main_black: #000;
+@gray: #969696;
+@gray_2: #E4E4E4;
+
+html {
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  font-size: 14px;
+}
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::selection {
+    background: #e8334d;
+    color: #fff;
+  }
+}
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #000000;
+  line-height: 100%;
+  .transition;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+p {
+  & + p {
+    margin-top: 20px;
+  }
+  &.big {
+    font-size: 20px;
+  }
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+}
+input {
+  appearance: none;
+  
+  ::-webkit-input-placeholder {
+    color: #000;
+  }
+  ::-moz-placeholder {
+    color: #000;
+  }
+  :-moz-placeholder {
+    color: #000;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+  }
+}
+input:not([type='submit']) {
+  width: 100%;
+  min-height: 76px;
+  padding: 0 25px;
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  display: block;
+  border-radius: 38px;
+  letter-spacing: -0.2px;
+}
+label {
+  text-align: center;
+  display: block;
+  font-size: 19px;
+  letter-spacing: 0.32px;
+  line-height: 70px;
+
+  input {
+    display: none !important;
+  }
+}
+textarea {
+  max-width: 100%;
+  outline: none;
+  display: block;
+  padding: 15px 0;
+  min-height: 178px;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+}
+strong {
+  font-weight: 700;
+}
+.bold {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+.hide-desktop {
+  display: none;
+}
